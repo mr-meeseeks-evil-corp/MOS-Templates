@@ -19,7 +19,8 @@
       "name": "Appdata",
       "mode": "rw",
       "host": "/mnt/cache/appdata/element-web/config/config.json",
-      "container": "/app/config.json"
+      "container": "/app/config.json",
+      "description": "Element configuration file for Matrix homeserver settings."
     }
   ],
   "ports": [
@@ -27,7 +28,8 @@
       "name": "Port",
       "protocol": "tcp",
       "host": "8075",
-      "container": "80"
+      "container": "80",
+      "description": "Web interface port for Element web client."
     }
   ],
   "variables": [],

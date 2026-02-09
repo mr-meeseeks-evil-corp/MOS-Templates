@@ -19,7 +19,8 @@
       "name": "Server Data",
       "mode": "rw",
       "host": "/mnt/cache/appdata/minecraft-server",
-      "container": "/data"
+      "container": "/data",
+      "description": "Minecraft world data, configuration files and plugins."
     }
   ],
   "ports": [
@@ -27,13 +28,15 @@
       "name": "MC_PORT",
       "protocol": "tcp",
       "host": "25565",
-      "container": "25565"
+      "container": "25565",
+      "description": "Main Minecraft server port for player connections."
     },
     {
       "name": "RCON_PORT",
       "protocol": "tcp",
       "host": "25575",
-      "container": "25575"
+      "container": "25575",
+      "description": "RCON port for remote server administration."
     }
   ],
   "variables": [
@@ -41,37 +44,43 @@
       "name": "EULA",
       "key": "EULA",
       "value": "TRUE",
-      "mask": false
+      "mask": false,
+      "description": "Accept Minecraft EULA (must be TRUE to start server)."
     },
     {
       "name": "Server Type",
       "key": "TYPE",
       "value": "VANILLA",
-      "mask": false
+      "mask": false,
+      "description": "Server type (VANILLA, PAPER, FORGE, FABRIC, etc.)."
     },
     {
       "name": "Memory",
       "key": "MEMORY",
       "value": "12G",
-      "mask": false
+      "mask": false,
+      "description": "Maximum memory allocation for the server (e.g., 2G, 4G, 12G)."
     },
     {
       "name": "Enable RCON",
       "key": "ENABLE_RCON",
       "value": "true",
-      "mask": false
+      "mask": false,
+      "description": "Enable RCON remote console (true/false)."
     },
     {
       "name": "RCON Password",
       "key": "RCON_PASSWORD",
       "value": "",
-      "mask": true
+      "mask": true,
+      "description": "Password for RCON remote administration."
     },
     {
       "name": "RCON Port",
       "key": "RCON_PORT",
       "value": "25575",
-      "mask": false
+      "mask": false,
+      "description": "Port number for RCON connections."
     }
   ],
   "devices": [],

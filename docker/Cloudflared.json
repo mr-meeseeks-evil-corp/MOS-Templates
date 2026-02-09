@@ -19,7 +19,8 @@
       "name": "data",
       "mode": "rw",
       "host": "/mnt/cache/appdata/cloudflared",
-      "container": "/home/nonroot/.cloudflared/"
+      "container": "/home/nonroot/.cloudflared/",
+      "description": "Cloudflare tunnel configuration and credentials."
     }
   ],
   "ports": [],

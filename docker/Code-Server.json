@@ -19,7 +19,8 @@
       "name": "Appdata",
       "mode": "rw",
       "host": "/mnt/cache/appdata/code-server/config",
-      "container": "/config"
+      "container": "/config",
+      "description": "Configuration files and user settings for code-server."
     }
   ],
   "ports": [
@@ -27,7 +28,8 @@
       "name": "WebUI",
       "protocol": "tcp",
       "host": "8443",
-      "container": "8443"
+      "container": "8443",
+      "description": "Web interface port for accessing VS Code in the browser."
     }
   ],
   "variables": [
@@ -35,61 +37,71 @@
       "name": "PASSWORD",
       "key": "PASSWORD",
       "value": "",
-      "mask": true
+      "mask": true,
+      "description": "Password for web interface login."
     },
     {
       "name": "HASHED_PASSWORD",
       "key": "HASHED_PASSWORD",
       "value": "",
-      "mask": true
+      "mask": true,
+      "description": "Pre-hashed password for web interface (alternative to PASSWORD)."
     },
     {
       "name": "SUDO_PASSWORD",
       "key": "SUDO_PASSWORD",
       "value": "",
-      "mask": true
+      "mask": true,
+      "description": "Password for sudo commands within the container."
     },
     {
       "name": "SUDO_PASSWORD_HASH",
       "key": "SUDO_PASSWORD_HASH",
       "value": "",
-      "mask": true
+      "mask": true,
+      "description": "Pre-hashed sudo password (alternative to SUDO_PASSWORD)."
     },
     {
       "name": "PROXY_DOMAIN",
       "key": "PROXY_DOMAIN",
       "value": "code-server.my.domain",
-      "mask": false
+      "mask": false,
+      "description": "Domain name for reverse proxy configuration."
     },
     {
       "name": "DEFAULT_WORKSPACE",
       "key": "DEFAULT_WORKSPACE",
       "value": "/config/workspace",
-      "mask": false
+      "mask": false,
+      "description": "Default workspace folder opened on startup."
     },
     {
       "name": "PWA_APPNAME",
       "key": "PWA_APPNAME",
       "value": "code-server",
-      "mask": false
+      "mask": false,
+      "description": "Progressive Web App name shown in browser."
     },
     {
       "name": "PUID",
       "key": "PUID",
       "value": "500",
-      "mask": false
+      "mask": false,
+      "description": "User ID for file permissions."
     },
     {
       "name": "PGID",
       "key": "PGID",
       "value": "500",
-      "mask": false
+      "mask": false,
+      "description": "Group ID for file permissions."
     },
     {
       "name": "UMASK",
       "key": "UMASK",
       "value": "022",
-      "mask": false
+      "mask": false,
+      "description": "File creation mask for new files."
     }
   ],
   "devices": [],

@@ -19,7 +19,8 @@
       "name": "Path /data",
       "mode": "rw",
       "host": "/mnt/cache/appdata/kitchenowl",
-      "container": "/data"
+      "container": "/data",
+      "description": "Database and application data storage."
     }
   ],
   "ports": [
@@ -27,7 +28,8 @@
       "name": "KitchenOwl UI",
       "protocol": "tcp",
       "host": "8123",
-      "container": "8080"
+      "container": "8080",
+      "description": "Web interface port for KitchenOwl application."
     }
   ],
   "variables": [
@@ -35,49 +37,57 @@
       "name": "JWT Secret (CHANGE THIS!)",
       "key": "JWT_SECRET_KEY",
       "value": "key",
-      "mask": true
+      "mask": true,
+      "description": "Secret key for JWT token generation and validation."
     },
     {
       "name": "OPEN_REGISTRATION",
       "key": "OPEN_REGISTRATION",
       "value": "false",
-      "mask": false
+      "mask": false,
+      "description": "Allow new users to register without invitation (true/false)."
     },
     {
       "name": "SMTP_HOST",
       "key": "SMTP_HOST",
       "value": "mail.domain.com",
-      "mask": false
+      "mask": false,
+      "description": "SMTP server hostname for sending emails."
     },
     {
       "name": "SMTP_PORT",
       "key": "SMTP_PORT",
       "value": "465",
-      "mask": false
+      "mask": false,
+      "description": "SMTP server port (usually 465 for SSL, 587 for TLS)."
     },
     {
       "name": "SMTP_USER",
       "key": "SMTP_USER",
       "value": "mail@domain.com",
-      "mask": false
+      "mask": false,
+      "description": "SMTP authentication username."
     },
     {
       "name": "SMTP_PASS",
       "key": "SMTP_PASS",
       "value": "XXXX",
-      "mask": true
+      "mask": true,
+      "description": "SMTP authentication password."
     },
     {
       "name": "SMTP_FROM",
       "key": "SMTP_FROM",
       "value": "mail@domain.com",
-      "mask": false
+      "mask": false,
+      "description": "Email sender address for outgoing messages."
     },
     {
       "name": "FRONT_URL",
       "key": "FRONT_URL",
       "value": "https://kitchenowl.domain.com",
-      "mask": false
+      "mask": false,
+      "description": "Public URL where KitchenOwl is accessible (for email links)."
     }
   ],
   "devices": [],

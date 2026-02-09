@@ -20,7 +20,8 @@
       "name": "Gotenberg API Port",
       "protocol": "tcp",
       "host": "3000",
-      "container": "3000"
+      "container": "3000",
+      "description": "HTTP API port for document conversion requests."
     }
   ],
   "variables": [],

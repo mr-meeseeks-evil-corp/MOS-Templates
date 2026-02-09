@@ -19,13 +19,15 @@
       "name": "Config",
       "mode": "rw",
       "host": "/mnt/cache/appdata/nextcloud",
-      "container": "/config"
+      "container": "/config",
+      "description": "Nextcloud configuration, database and web files."
     },
     {
       "name": "Data",
       "mode": "rw",
       "host": "/mnt/cache/appdata/nextcloud_data",
-      "container": "/data"
+      "container": "/data",
+      "description": "User files and uploaded data storage."
     }
   ],
   "ports": [
@@ -33,7 +35,8 @@
       "name": "Web UI Port",
       "protocol": "tcp",
       "host": "443",
-      "container": "443"
+      "container": "443",
+      "description": "HTTPS web interface port for Nextcloud."
     }
   ],
   "variables": [    
@@ -41,13 +44,15 @@
       "name": "PUID",
       "key": "PUID",
       "value": "1000",
-      "mask": false
+      "mask": false,
+      "description": "User ID for file permissions."
     },
     {
       "name": "PGID",
       "key": "PGID",
       "value": "1000",
-      "mask": false
+      "mask": false,
+      "description": "Group ID for file permissions."
     }
   ],
   "devices": []

@@ -12,14 +12,15 @@
   "category": [ "productivity" ],
   "project": "https://github.com/amir20/dozzle",
   "support": "https://github.com/amir20/dozzle/issues",
-  "description": "Dozzle is a small lightweight application with a web based interface to monitor Docker logs. It doesn’t store any log files. It is for live monitoring of your container logs only.",
+  "description": "Dozzle is a small lightweight application with a web based interface to monitor Docker logs. It doesn't store any log files. It is for live monitoring of your container logs only.",
   "donate": "https://buymeacoffee.com/amirraminfar",
   "paths": [
     {
       "name": "Docker",
       "mode": "rw",
       "host": "/var/run/docker.sock",
-      "container": "/var/run/docker.sock"
+      "container": "/var/run/docker.sock",
+      "description": "Docker socket for accessing container logs."
     }
   ],
   "ports": [
@@ -27,7 +28,8 @@
       "name": "WebUI Port",
       "protocol": "tcp",
       "host": "8080",
-      "container": "8080"
+      "container": "8080",
+      "description": "Web interface port for viewing container logs."
     }
   ],
   "variables": [],

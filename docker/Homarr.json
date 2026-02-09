@@ -19,13 +19,15 @@
       "name": "Appdata",
       "mode": "rw",
       "host": "/mnt/cache/appdata/homarr",
-      "container": "/appdata"
+      "container": "/appdata",
+      "description": "Configuration, database and user data for Homarr."
     },
     {
       "name": "Docker Socket",
       "mode": "rw",
       "host": "/var/run/docker.sock",
-      "container": "/var/run/docker.sock"
+      "container": "/var/run/docker.sock",
+      "description": "Docker socket for monitoring and controlling containers."
     }
   ],
   "ports": [
@@ -33,7 +35,8 @@
       "name": "WebUI Port",
       "protocol": "tcp",
       "host": "7575",
-      "container": "7575"
+      "container": "7575",
+      "description": "Web interface port for Homarr dashboard."
     }
   ],
   "variables": [
@@ -41,7 +44,8 @@
       "name": "SECRET_ENCRYPTION_KEY",
       "key": "SECRET_ENCRYPTION_KEY",
       "value": "CREATE A NEW ONE WITH COMMAND openssl rand -hex 32",
-      "mask": false
+      "mask": false,
+      "description": "Encryption key for securing sensitive data. Generate with: openssl rand -hex 32"
     }
   ],
   "devices": [],

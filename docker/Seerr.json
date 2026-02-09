@@ -19,7 +19,8 @@
       "name": "Appdata",
       "mode": "rw",
       "host": "/mnt/cache/appdata/seerr",
-      "container": "/app/config/"
+      "container": "/app/config/",
+      "description": "Configuration and database files for Jellyseerr."
     }
   ],
   "ports": [
@@ -27,7 +28,8 @@
       "name": "Network",
       "protocol": "tcp",
       "host": "5055",
-      "container": "5055"
+      "container": "5055",
+      "description": "Web interface port for Jellyseerr."
     }
   ],
   "variables": [
@@ -35,31 +37,36 @@
       "name": "Log",
       "key": "LOG_LEVEL",
       "value": "info",
-      "mask": false
+      "mask": false,
+      "description": "Logging verbosity level (debug, info, warn, error)."
     },
     {
       "name": "Emby Support",
       "key": "SEERR_TYPE",
       "value": "type",
-      "mask": false
+      "mask": false,
+      "description": "Media server type (jellyfin, plex, emby)."
     },
     {
       "name": "PUID",
       "key": "PUID",
       "value": "500",
-      "mask": false
+      "mask": false,
+      "description": "User ID for file permissions."
     },
     {
       "name": "PGID",
       "key": "PGID",
       "value": "500",
-      "mask": false
+      "mask": false,
+      "description": "Group ID for file permissions."
     },
     {
       "name": "UMASK",
       "key": "UMASK",
       "value": "022",
-      "mask": false
+      "mask": false,
+      "description": "File creation mask for new files."
     }
   ],
   "devices": []

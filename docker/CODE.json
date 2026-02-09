@@ -20,7 +20,8 @@
       "name": "Port",
       "protocol": "tcp",
       "host": "9980",
-      "container": "9980"
+      "container": "9980",
+      "description": "Web interface port for Collabora Online."
     }
   ],
   "variables": [
@@ -28,25 +29,29 @@
       "name": "aliasgroup1",
       "key": "aliasgroup1",
       "value": "https://cloud.mydomain.tld:443,https://cloud\\.mydomain\\.tld:443",
-      "mask": false
+      "mask": false,
+      "description": "Allowed domain aliases for connecting cloud services."
     },
     {
       "name": "username",
       "key": "username",
       "value": "admin",
-      "mask": false
+      "mask": false,
+      "description": "Admin username for web interface access."
     },
     {
       "name": "password",
       "key": "password",
       "value": "password",
-      "mask": true
+      "mask": true,
+      "description": "Admin password for web interface access."
     },
     {
       "name": "dictionaries",
       "key": "dictionaries",
       "value": "en_GB en_US de_DE",
-      "mask": false
+      "mask": false,
+      "description": "Space-separated list of dictionaries for spell checking."
     }
   ],
   "devices": []

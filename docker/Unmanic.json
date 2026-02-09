@@ -19,19 +19,22 @@
       "name": "Appdata",
       "mode": "rw",
       "host": "/mnt/cache/appdata/unmanic/",
-      "container": "/config"
+      "container": "/config",
+      "description": "Configuration files and Unmanic database."
     },
     {
       "name": "Media Libary",
       "mode": "rw",
       "host": "/mnt/media/",
-      "container": "/library"
+      "container": "/library",
+      "description": "Media library to be processed by Unmanic."
     },
     {
       "name": "Cache Directory",
       "mode": "rw",
       "host": "/mnt/cache/temp",
-      "container": "/tmp/unmanic"
+      "container": "/tmp/unmanic",
+      "description": "Temporary working directory for file conversions."
     }
   ],
   "ports": [
@@ -39,7 +42,8 @@
       "name": "WebUI Port",
       "protocol": "tcp",
       "host": "8888",
-      "container": "8888"
+      "container": "8888",
+      "description": "Web interface port for Unmanic dashboard."
     }
   ],
   "variables": [],

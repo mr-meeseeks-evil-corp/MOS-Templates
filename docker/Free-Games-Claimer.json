@@ -19,7 +19,8 @@
       "name": "FGC Data",
       "mode": "rw",
       "host": "/mnt/cache/appdata/free-games-claimer/data",
-      "container": "/fgc/data"
+      "container": "/fgc/data",
+      "description": "Persistent browser data and claim history."
     }
   ],
   "ports": [
@@ -27,7 +28,8 @@
       "name": "WebUI",
       "protocol": "tcp",
       "host": "6080",
-      "container": "6080"
+      "container": "6080",
+      "description": "VNC web interface for viewing browser automation."
     }
   ],
   "variables": [
@@ -35,67 +37,78 @@
       "name": "Generic Email",
       "key": "EMAIL",
       "value": "email",
-      "mask": false
+      "mask": false,
+      "description": "Generic email address for all platforms (if not specified individually)."
     },
     {
       "name": "Generic Password",
       "key": "PASSWORD",
       "value": "xxxx",
-      "mask": true
+      "mask": true,
+      "description": "Generic password for all platforms (if not specified individually)."
     },
     {
       "name": "Epic Games Mail",
       "key": "EG_EMAIL",
       "value": "email",
-      "mask": false
+      "mask": false,
+      "description": "Epic Games Store account email address."
     },
     {
       "name": "Epic Games Password",
       "key": "EG_PASSWORD",
       "value": "xxxx",
-      "mask": true
+      "mask": true,
+      "description": "Epic Games Store account password."
     },
     {
       "name": "Epic Games MFA OTP",
       "key": "EG_OTPKEY",
       "value": "key",
-      "mask": false
+      "mask": false,
+      "description": "Epic Games two-factor authentication OTP secret key."
     },
     {
       "name": "Prime Gaming Mail",
       "key": "PG_EMAIL",
       "value": "email",
-      "mask": false
+      "mask": false,
+      "description": "Amazon Prime Gaming account email address."
     },
     {
       "name": "Prime Gaming Password",
       "key": "PG_PASSWORD",
       "value": "xxxx",
-      "mask": true
+      "mask": true,
+      "description": "Amazon Prime Gaming account password."
     },
     {
       "name": "Prime Gaming MFA OTP",
       "key": "PG_OTPKEY",
       "value": "key",
-      "mask": false
+      "mask": false,
+      "description": "Prime Gaming two-factor authentication OTP secret key."
     },
     {
       "name": "Prime Gaming Redeem on external store",
       "key": "PG_REDEEM",
       "value": "0",
-      "mask": false
+      "mask": false,
+      "description": "Automatically redeem claimed games to external stores (0=disabled, 1=enabled)."
     },
     {
       "name": "GOG Mail",
       "key": "GOG_EMAIL",
       "value": "email",
-      "mask": false
+      "mask": false,
+      "description": "GOG account email address."
     },
     {
       "name": "GOG Password",
       "key": "GOG_PASSWORD",
       "value": "xxxx",
-      "mask": true
+      "mask": true,
+      "description": "GOG account password."
     }
   ],
   "devices": []

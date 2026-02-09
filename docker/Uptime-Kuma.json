@@ -19,7 +19,8 @@
       "name": "Appdata",
       "mode": "rw",
       "host": "/mnt/cache/appdata/uptime-kuma",
-      "container": "/app/data"
+      "container": "/app/data",
+      "description": "Application database and configuration storage."
     }
   ],
   "ports": [
@@ -27,7 +28,8 @@
       "name": "WebUI",
       "protocol": "tcp",
       "host": "3001",
-      "container": "3001"
+      "container": "3001",
+      "description": "Web interface port for accessing Uptime Kuma."
     }
   ],
   "variables": [],
