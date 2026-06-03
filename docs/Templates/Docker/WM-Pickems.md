@@ -63,6 +63,8 @@ the API and the embedded SvelteKit app.
 
 ## 🚀 Quick Start
 
+> ⚠️ **Permissions:** The container runs as `--user 500:500` to match MOS file permissions. If you change this, ensure the `/mnt/cache/appdata/wm-pickems` directory is writable by the specified UID/GID.
+
 1. Open the **MOS Hub** and search for **WM-Pickems**
 2. Click **Install**
 3. Access WM Tips at `http://your-server-ip:8090`
