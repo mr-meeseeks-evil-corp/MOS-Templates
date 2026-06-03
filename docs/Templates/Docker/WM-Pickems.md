@@ -149,6 +149,7 @@ or proxy health checks.
 > free openfootball data for results. You only need a paid key for real-time
 > live scores.
 
+> ⚠️ **Note:** The container runs as root (`--user 0:0`) to ensure PocketBase can write its database on MOS bind-mount volumes. The upstream Dockerfile uses UID 10001, but MOS volume permissions require root access for write operations.
 > ⚠️ **Note:** The app is branded **WM Tips** in the UI. The repo/module name
 > is **wm-pickems**.
 
